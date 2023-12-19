@@ -1,0 +1,39 @@
+.card{
+    align-items: space-between;
+}
+.upperFigure h2{
+    font-size: 8rem;
+}
+.numValue h2{
+    font-size: 8rem;
+    justify-content: center;
+}
+.lowerFigure h2{
+    font-size: 8rem;
+}
+.numValue{
+    height: 33.33%;
+}
+.upperFigure{
+    flex: 50%;
+    height: 33.33%;
+}
+.lowerFigure{
+    flex: 50%;
+    text-align: right;
+    height: 33.33%;
+}
+
+#figUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 4%;
+}
+
+#figLow{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 4%;
+}
