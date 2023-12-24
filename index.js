@@ -11,13 +11,14 @@ submitForm.addEventListener("submit", (e) => {
     card.style.height = setHeigth + "px";
 })
 
-function changeCard(){
-    let heart = `<h2>♥️</h2>`;
-    let spade = `<h2>♠️</h2>`;
-    let diamond = `<h2>♣️</h2>`;
-    let club = `<h2>♦️</h2>`;
+function pickItem(){
+    let heart = "♥️";
+    let spade = "♠️";
+    let diamond = "♣️";
+    let club = "♦️";
     let figures = [heart, spade, diamond, club];
     let numValues = [1,2,3,4,5,6,7,8,9,10,"J","K","Q","A"];
+    let colors = ["red","black","blue","green"];
     let figPosition = Math.floor(Math.random()*4);
     let fig = figures[figPosition];
     let numPosition = Math.floor(Math.random()*14);
@@ -30,6 +31,19 @@ function changeCard(){
     figLower.innerHTML = fig;
     let cardValue = document.getElementById("num");
     cardValue.innerHTML = num;
+}
+function changeCol(){
+    let fig = document.getElementById("figUp");
+    console.log(fig.innerHTML);
+    if (fig.innerHTML === "♥️" || fig.innerHTML === "♦️"){
+            let col = document.getElementById("num").style.color = "red";
+            console.log(col);
+        }
+    }
+
+function changeCard(){
+    pickItem();
+    changeCol();
     alert("New card generated!");
 }
 
@@ -40,5 +54,3 @@ function delayChange(){
 window.addEventListener("load", changeCard);
 let btn = document.getElementById("myButton");
 btn.addEventListener("click", delayChange);
-
-    
