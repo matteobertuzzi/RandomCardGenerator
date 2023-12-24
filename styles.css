@@ -2,14 +2,14 @@
     align-items: space-between;
 }
 .upperFigure h2{
-    font-size: 8rem;
+    font-size: 15vh;
 }
 .numValue h2{
-    font-size: 8rem;
+    font-size: 15vh;
     justify-content: center;
 }
 .lowerFigure h2{
-    font-size: 8rem;
+    font-size: 15vh;
 }
 .numValue{
     height: 33.33%;
