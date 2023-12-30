@@ -7,8 +7,12 @@ submitForm.addEventListener("submit", (e) => {
     let setWidth = document.getElementById("width").value;
     console.log(setWidth, setHeigth);
     let card = document.getElementById("card");
-    card.style.width = setHeigth + "px";
-    card.style.height = setHeigth + "px";
+    let cardWidth = card.style.width = setWidth + "px";
+    let cardHeight = card.style.height = setHeigth + "px";
+    let numSize = document.getElementById("num").style.fontSize = setWidth/3 + "px";
+    let uph2Size = document.getElementById("figUp").style.fontSize = setWidth/3 + "px";
+    let lowh2Size = document.getElementById("figLow").style.fontSize = setWidth/3 + "px";
+    console.log(numSize);
 })
 
 function pickItem(){
@@ -36,8 +40,9 @@ function changeCol(){
     let fig = document.getElementById("figUp");
     console.log(fig.innerHTML);
     if (fig.innerHTML === "♥️" || fig.innerHTML === "♦️"){
-            let col = document.getElementById("num").style.color = "red";
-            console.log(col);
+            let numCol = document.getElementById("num").style.color = "red";
+            let uph2Col = document.getElementById("figUp").style.color = "red";
+            let lowh2Col = document.getElementById("figLow").style.color = "red";
         }
     }
 
@@ -54,3 +59,5 @@ function delayChange(){
 window.addEventListener("load", changeCard);
 let btn = document.getElementById("myButton");
 btn.addEventListener("click", delayChange);
+
+    
